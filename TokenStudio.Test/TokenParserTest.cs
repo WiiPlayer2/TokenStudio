@@ -5,16 +5,18 @@ using TokenStudio.Core;
 
 namespace TokenStudio.Test
 {
+    using TokenStudio.CodeGen;
+
     [TestClass]
     public partial class TokenParserTest
     {
-        //[TokenParser]
+        [TokenParser]
         private enum TestTokenType
         {
-            //[Pattern("a+")]
+            [Pattern("a+")]
             Token1,
 
-            //[Pattern("b+")]
+            [Pattern("b+")]
             Token2,
         }
 
@@ -30,6 +32,22 @@ namespace TokenStudio.Test
                 new {Type = TestTokenType.Token1, Value = "aaa"},
                 new {Type = TestTokenType.Token2, Value="bbb"},
             };
+
+            var result = parser.GetTokenStream(input).ToList();
+
+            result.Should().BeEquivalentTo(expectedTokens);
+        }
+
+        [TestMethod, Timeout(10000)]
+        public void GetTokenStream_WithTestTokenTypeParser_ReturnsCorrectTokens()
+        {
+            var input = "aaabbb";
+            var parser = new TestTokenTypeParser();
+            var expectedTokens = new[]
+                                 {
+                                     new {Type = TestTokenType.Token1, Value = "aaa"},
+                                     new {Type = TestTokenType.Token2, Value = "bbb"},
+                                 };
 
             var result = parser.GetTokenStream(input).ToList();
 
