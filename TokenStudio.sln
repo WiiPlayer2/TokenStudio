@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenStudio.Core", "TokenSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenStudio.Test", "TokenStudio.Test\TokenStudio.Test.csproj", "{DB97D2B2-9722-416C-A6CE-535E849B0545}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenStudio.CodeGen", "TokenStudio.CodeGen\TokenStudio.CodeGen.csproj", "{5DF9FB4C-12D5-4113-8EE1-25D7EB3639BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DB97D2B2-9722-416C-A6CE-535E849B0545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB97D2B2-9722-416C-A6CE-535E849B0545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB97D2B2-9722-416C-A6CE-535E849B0545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF9FB4C-12D5-4113-8EE1-25D7EB3639BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF9FB4C-12D5-4113-8EE1-25D7EB3639BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF9FB4C-12D5-4113-8EE1-25D7EB3639BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF9FB4C-12D5-4113-8EE1-25D7EB3639BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
