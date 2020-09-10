@@ -41,6 +41,7 @@ namespace TokenStudio.Core
                 }
 
                 yield return new Token(type, match, match.Value);
+                currentPosition = match.Index + match.Length;
             }
         }
 
